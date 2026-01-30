@@ -8,7 +8,7 @@ export async function getHotspotData(hotspotId: string): Promise<{ data: any | n
 
   try {
     const headers = { 'X-eBirdApiToken': EBIRD_API_KEY };
-    const now = new Date(); // 当前时间：2026-01-27
+    const now = new Date();
 
     const [infoResponse, checklistsResponse] = await Promise.all([
       fetch(`${EBIRD_API_BASE_URL}/ref/hotspot/info/${hotspotId}`, { headers }),
